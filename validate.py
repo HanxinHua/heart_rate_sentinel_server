@@ -113,15 +113,19 @@ def validate_email(email):
     return False
 
 
+def str_to_datetime(date):
+    if ":" in date:
+        if "." in date:
+            return dt.datetime.strptime(date, "%Y-%m-%d %H:%M:%S.%f")
+        else:
+            return dt.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
+    else:
+        return dt.datetime.strptime(date, "%Y-%m-%d")
+
+
 def validate_time(date):
     try:
-        if ":" in date:
-            if "." in date:
-                dt.datetime.strptime(date, "%Y-%m-%d %H:%M:%S.%f")
-            else:
-                dt.datetime.strptime(date, "%Y-%m-%d %H:%M:%S")
-        else:
-            dt.datetime.strptime(date, "%Y-%m-%d")
+        str_to_datetime(date)
         return True
     except ValueError:
         return False
