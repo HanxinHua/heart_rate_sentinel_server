@@ -1,4 +1,10 @@
 def is_tachycardia(heart_rate, age):
+    """
+        :Synopsis: Judge whether the patient is tachycardic at that time
+        :param heart_rate: The patient's heart beat
+        :param age: The patient's age
+        :returns: True if the patient is tachycardic; Otherwise false
+    """
     if age > 15:
         if heart_rate > 100:
             return True
