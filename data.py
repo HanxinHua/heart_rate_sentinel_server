@@ -85,5 +85,6 @@ d = {
     "patient_id": "1",
     "heart_rate_average_since": str(t)
 }
-r = requests.post("http://127.0.0.1:5000/api/heart_rate/interval_average", json=d)
+r = requests.post("http://127.0.0.1:5000/api/heart_rate/interval_average",
+                  json=d)
 print(r.text)
