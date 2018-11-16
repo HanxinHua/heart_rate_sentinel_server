@@ -17,7 +17,8 @@ def test_validate_email(email, expected):
 
 
 @pytest.mark.parametrize("date,expected", [
-    ("2018-03-09 11:00:36.372339", datetime.datetime(2018, 3, 9, 11, 0, 36, 372339)),
+    ("2018-03-09 11:00:36.372339", datetime.datetime(2018, 3, 9, 11, 0, 36,
+                                                     372339)),
     ("2018-03-09", datetime.datetime(2018, 3, 9)),
     ("2018-03-09 11:00:36", datetime.datetime(2018, 3, 9, 11, 0, 36)),
     ])
