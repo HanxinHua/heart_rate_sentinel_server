@@ -1,4 +1,5 @@
 import requests
+import datetime
 
 
 d = {
@@ -6,6 +7,7 @@ d = {
     "attending_email": "hh177@duke.edu",
     "user_age": 50,
 }
+'''
 requests.post("http://127.0.0.1:5000/api/new_patient", json=d)
 d = {
     "patient_id": "2",
@@ -18,22 +20,47 @@ d = {
     "attending_email": "hh177@duke.edu",
     "user_age": 5,
 }
-requests.post("http://127.0.0.1:5000/api/new_patient", json=d)
+'''
+r = requests.post("http://127.0.0.1:5000/api/new_patient", json=d)
+print(r.text)
 d = {
     "patient_id": "1",
-    "heart_rate": 97
+    "heart_rate": 90
 }
-requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+r = requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+print(r.text)
 d = {
     "patient_id": "1",
-    "heart_rate": 101
+    "heart_rate": 100
 }
-requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+t = datetime.datetime.now()
+r = requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+print(r.text)
 d = {
     "patient_id": "1",
-    "heart_rate": 186
+    "heart_rate": 110
 }
-requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+r = requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+print(r.text)
+d = {
+    "patient_id": "1",
+    "heart_rate": 120
+}
+r = requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+print(r.text)
+d = {
+    "patient_id": "1",
+    "heart_rate": 130
+}
+r = requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+print(r.text)
+d = {
+    "patient_id": "1",
+    "heart_rate": 140
+}
+r = requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
+print(r.text)
+'''
 d = {
     "patient_id": "2",
     "heart_rate": 150
@@ -53,6 +80,10 @@ d = {
     "patient_id": "3",
     "heart_rate": 130
 }
-requests.post("http://127.0.0.1:5000/api/heart_rate", json=d)
-r = requests.get("http://127.0.0.1:5000/api/status/1")
-print(r)
+'''
+d = {
+    "patient_id": "1",
+    "heart_rate_average_since": str(t)
+}
+r = requests.post("http://127.0.0.1:5000/api/heart_rate/interval_average", json=d)
+print(r.text)
