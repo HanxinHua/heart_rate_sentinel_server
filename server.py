@@ -78,7 +78,8 @@ def new_patient():
     if validate_add_patient(r_dic):
         try:
             patient = [x for x in patients
-                       if x["patient_id"] == r_dic["patient_id"]][0]
+                       if x["patient_id"] ==
+                       r_dic["patient_id"]][0]
             patient["attending_email"] = r_dic["attending_email"]
             patient["user_age"] = r_dic["user_age"]
         except IndexError:
