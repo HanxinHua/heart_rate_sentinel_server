@@ -6,3 +6,5 @@ This server will be built to receive POST requests from mock patient heart rate 
 
 This code is used locally as the address is 127.0.0.1
 We can change it to 0.0.0.0 to receive publicly.
+
+Mine is :  http://vcm-7300.vm.duke.edu:5000/
