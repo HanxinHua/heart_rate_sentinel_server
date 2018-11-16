@@ -1,0 +1,399 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="python">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Welcome to heart_rate_sentinel_server&#39;s documentation! &#8212; heart_rate_sentinel_server 1.0.0 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="welcome-to-heart-rate-sentinel-server-s-documentation">
+<h1>Welcome to heart_rate_sentinel_server's documentation!<a class="headerlink" href="#welcome-to-heart-rate-sentinel-server-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p><em>Steven  Hua</em></p>
+<p><em>hh177&#64;duke.edu</em></p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></li>
+<li><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></li>
+<li><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></li>
+</ul>
+<div class="section" id="module-server">
+<span id="execution-module"></span><h2>Execution module<a class="headerlink" href="#module-server" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="server.status">
+<code class="descclassname">server.</code><code class="descname">status</code><span class="sig-paren">(</span><em>patient_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/server.html#status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#server.status" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Get the tachycardia status of the patient</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>patient_id</strong> -- The patient's id</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The information about the patient</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">IndexError: No such patient in the system</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="server.get_heart_rate">
+<code class="descclassname">server.</code><code class="descname">get_heart_rate</code><span class="sig-paren">(</span><em>patient_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/server.html#get_heart_rate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#server.get_heart_rate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Get the heart rate list of the patient</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>patient_id</strong> -- The patient's id</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The list of the patient's heart rate</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">IndexError: No such patient in the system</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="server.get_interval_average">
+<code class="descclassname">server.</code><code class="descname">get_interval_average</code><span class="sig-paren">(</span><em>patient_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/server.html#get_interval_average"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#server.get_interval_average" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Get the overall average of the patient's heart beat</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>patient_id</strong> -- The patient's id</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">The overall average of the patient's heart beat</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">IndexError: No such patient in the system</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">ValueError: No data for the patient yet</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="server.new_patient">
+<code class="descclassname">server.</code><code class="descname">new_patient</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/server.html#new_patient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#server.new_patient" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Add a patient in the database</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the info of the patient</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">IndexError: No such patient in the system then add the patient</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="server.post_heart_rate">
+<code class="descclassname">server.</code><code class="descname">post_heart_rate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/server.html#post_heart_rate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#server.post_heart_rate" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Post a heart beat of a patient in the database</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the info of the patient</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">IndexError: No such patient in the system then add the patient</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="server.post_interval_average">
+<code class="descclassname">server.</code><code class="descname">post_interval_average</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/server.html#post_interval_average"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#server.post_interval_average" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Get the interval_average of the patient since a given time</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The interval_average of the patient since a given time</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">IndexError: No such patient in the system then add the patient</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">ZeroDivisionError: No data since that time</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-average">
+<span id="calculation-module"></span><h2>Calculation module<a class="headerlink" href="#module-average" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="average.calculate_average">
+<code class="descclassname">average.</code><code class="descname">calculate_average</code><span class="sig-paren">(</span><em>data</em>, <em>time</em>, <em>since</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/average.html#calculate_average"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#average.calculate_average" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body"><p class="first">Judge whether the patient is tachycardic at that time</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>data</strong> -- The patient's heart beat data list</li>
+<li><strong>time</strong> -- The patient's time data list matching the heart beat</li>
+<li><strong>since</strong> -- The given time which is interested by the user</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">The average heart beat since a time</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<span class="target" id="module-is_tachycardia"></span><dl class="function">
+<dt id="is_tachycardia.is_tachycardia">
+<code class="descclassname">is_tachycardia.</code><code class="descname">is_tachycardia</code><span class="sig-paren">(</span><em>heart_rate</em>, <em>age</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/is_tachycardia.html#is_tachycardia"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#is_tachycardia.is_tachycardia" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body"><p class="first">Judge whether the patient is tachycardic at that time</p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>heart_rate</strong> -- The patient's heart beat</li>
+<li><strong>age</strong> -- The patient's age</li>
+</ul>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last">True if the patient is tachycardic; Otherwise false</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-validate">
+<span id="validation-module"></span><h2>Validation module<a class="headerlink" href="#module-validate" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="validate.validate_add_patient">
+<code class="descclassname">validate.</code><code class="descname">validate_add_patient</code><span class="sig-paren">(</span><em>r_dic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/validate.html#validate_add_patient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#validate.validate_add_patient" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Judge whether the request format is legal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r_dic</strong> -- The patient's personal info request dict info</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if it is legal and false otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">AssertionError: data type is not legal</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">KeyError: data cannot be found</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="validate.validate_heart_rate_request">
+<code class="descclassname">validate.</code><code class="descname">validate_heart_rate_request</code><span class="sig-paren">(</span><em>r_dic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/validate.html#validate_heart_rate_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#validate.validate_heart_rate_request" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Judge whether the request format is legal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r_dic</strong> -- The patient's heart rate request dict info</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if it is legal and false otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">AssertionError: data type is not legal</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">KeyError: data cannot be found</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="validate.validate_interval_average_request">
+<code class="descclassname">validate.</code><code class="descname">validate_interval_average_request</code><span class="sig-paren">(</span><em>r_dic</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/validate.html#validate_interval_average_request"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#validate.validate_interval_average_request" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Judge whether the request format is legal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>r_dic</strong> -- The patient's average heart beat request dict info</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if it is legal and false otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">AssertionError: data type is not legal</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raise:</th><td class="field-body">KeyError: data cannot be found</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="validate.validate_email">
+<code class="descclassname">validate.</code><code class="descname">validate_email</code><span class="sig-paren">(</span><em>email</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/validate.html#validate_email"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#validate.validate_email" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Judge whether the email format is legal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>email</strong> -- The email str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if it is a legal email format and false otherwise</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="validate.str_to_datetime">
+<code class="descclassname">validate.</code><code class="descname">str_to_datetime</code><span class="sig-paren">(</span><em>date</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/validate.html#str_to_datetime"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#validate.str_to_datetime" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Transfer the date from str to datetime</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>date</strong> -- The date</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">date in datetime type</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="validate.validate_time">
+<code class="descclassname">validate.</code><code class="descname">validate_time</code><span class="sig-paren">(</span><em>date</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/validate.html#validate_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#validate.validate_time" title="Permalink to this definition">¶</a></dt>
+<dd><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Synopsis:</th><td class="field-body">Judge whether the date format is legal</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Parameters:</th><td class="field-body"><strong>date</strong> -- The date</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">True if it is legal and false otherwise</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raise:</th><td class="field-body">ValueError: data cannot be transferred to datetime</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">heart_rate_sentinel_server</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2018, Steven Hua.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
