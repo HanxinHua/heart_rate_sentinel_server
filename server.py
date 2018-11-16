@@ -26,8 +26,10 @@ def status(patient_id):
     index = time.index(max(time))
     tag = is_tachycardia(heart[index], age)
     if tag:
-        message = "Patient {} is tachycardic at {}".format(patient_id, str(time[index]))
-        sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+        message = "Patient {} is tachycardic at {}".format(patient_id,
+                                                           str(time[index]))
+        sg = sendgrid.SendGridAPIClient(apikey=os.environ
+                                        .get('SENDGRID_API_KEY'))
         from_email = Email("alert@medicalcenter.com")
         to_email = Email(mail_add)
         subject = "Alert"
@@ -75,7 +77,8 @@ def new_patient():
     r_dic = request.get_json()
     if validate_add_patient(r_dic):
         try:
-            patient = [x for x in patients if x["patient_id"] == r_dic["patient_id"]][0]
+            patient = [x for x in patients
+                       if x["patient_id"] == r_dic["patient_id"]][0]
             patient["attending_email"] = r_dic["attending_email"]
             patient["user_age"] = r_dic["user_age"]
         except IndexError:
@@ -98,7 +101,8 @@ def post_heart_rate():
     if not validate_heart_rate_request(r_dic):
         sys.exit(1)
     try:
-        patient = [x for x in patients if x["patient_id"] == r_dic["patient_id"]][0]
+        patient = [x for x in patients
+                   if x["patient_id"] == r_dic["patient_id"]][0]
     except IndexError:
         logging.error("This patient is not in the system yet.")
         return "This patient is not in the system yet."
@@ -114,7 +118,8 @@ def post_interval_average():
     if not validate_interval_average_request(r_dic):
         sys.exit(1)
     try:
-        patient = [x for x in patients if x["patient_id"] == r_dic["patient_id"]][0]
+        patient = [x for x in patients
+                   if x["patient_id"] == r_dic["patient_id"]][0]
     except IndexError:
         logging.error("This patient is not in the system yet.")
         return "This patient is not in the system yet."
@@ -122,7 +127,8 @@ def post_interval_average():
     try:
         ave = calculate_average(patient["heart_rate"], patient["time"], time)
     except ZeroDivisionError:
-        logging.error("This patient has no heart_rate measurement since the time yet.")
+        logging.error("This patient has no heart_rate measurement"
+                      " since the time yet.")
         return "This patient has no heart_rate measurement since the time yet."
     logging.info("Successfully calculate the heart_rate.")
     return jsonify(ave)
