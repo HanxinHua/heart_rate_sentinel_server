@@ -1,5 +1,6 @@
 from validate import *
 import pytest
+import datetime
 
 
 @pytest.mark.parametrize("email,expected", [
@@ -12,6 +13,16 @@ import pytest
     ])
 def test_validate_email(email, expected):
     response = validate_email(email)
+    assert response == expected
+
+
+@pytest.mark.parametrize("date,expected", [
+    ("2018-03-09 11:00:36.372339", datetime.datetime(2018, 3, 9, 11, 0, 36, 372339)),
+    ("2018-03-09", datetime.datetime(2018, 3, 9)),
+    ("2018-03-09 11:00:36", datetime.datetime(2018, 3, 9, 11, 0, 36)),
+    ])
+def test_str_to_datetime(date, expected):
+    response = str_to_datetime(date)
     assert response == expected
 
 
